@@ -1,0 +1,30 @@
+@font-face {
+  font-family: "noto sans";
+  src: url(NotoSans-Bold.woff2) format("woff2"),
+    url(NotoSans-Bold.woff) format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "noto sans";
+  src: url(NotoSans-BoldItalic.woff2) format("woff2"),
+    url(NotoSans-BoldItalic.woff) format("woff");
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "noto sans";
+  src: url(NotoSans.woff2) format("woff2"), url(NotoSans.woff) format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "noto sans";
+  src: url(NotoSans-Italic.woff2) format("woff2"),
+    url(NotoSans-Italic.woff) format("woff");
+  font-weight: 400;
+  font-style: italic;
+}
