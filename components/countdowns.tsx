@@ -7,7 +7,7 @@ const Countdowns = ({
   timerHours,
   timerMinutes,
   timerSeconds,
-}) => {
+}: any) => {
   return (
     <div className="shadow-[0_4px_30px_rgba(0,0,0,0.5),inset_0_0_0_2px_#4e5765] relative py-[10px] px-[30px] bg-[#0e1726]/[.7] w-full border-2 border-[#15243a] flex justify-center text-center flex-col before:content-[''] backdrop-blur-md before:inset-0 before:absolute before:bg-no-repeat before:bg-corner-image before:bg-corner-position pointer-events-none">
       <h1 className="text-3xl bg-gradient-to-b from-[#ffe98d] to-[#e19f27] bg-clip-text text-transparent">
