@@ -1,12 +1,12 @@
 import React from "react";
 
 const Anniversary = ({
-  timerYears,
-  timerMonths,
-  timerDays,
-  timerHours,
-  timerMinutes,
-  timerSeconds,
+  timerYears: number,
+  timerMonths: number,
+  timerDays: number,
+  timerHours: number,
+  timerMinutes: number,
+  timerSeconds: number,
 }) => {
   return (
     <div className="w-full my-6">
