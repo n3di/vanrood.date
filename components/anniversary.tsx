@@ -1,13 +1,13 @@
 import React from "react";
 
 const Anniversary = ({
-  timerYears: number,
-  timerMonths: number,
-  timerDays: number,
-  timerHours: number,
-  timerMinutes: number,
-  timerSeconds: number,
-}) => {
+  timerYears,
+  timerMonths,
+  timerDays,
+  timerHours,
+  timerMinutes,
+  timerSeconds,
+}: any) => {
   return (
     <div className="w-full my-6">
       <div className="mb-4 w-full flex justify-center items-center">
