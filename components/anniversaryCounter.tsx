@@ -1,27 +1,55 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import AnniversaryTitle from "./anniversaryTitle";
+import dayjs from "dayjs";
+import utc from "dayjs/plugin/utc";
+import relativeTime from "dayjs/plugin/relativeTime";
+import preciseDiff from "dayjs-precise-range";
 
-const Anniversary = ({
-  timerYears,
-  timerMonths,
-  timerDays,
-  timerHours,
-  timerMinutes,
-  timerSeconds,
-}: any) => {
+const Anniversary = () => {
+  dayjs.extend(utc);
+  dayjs.extend(relativeTime);
+  dayjs.extend(preciseDiff);
+
+  const [months, setMonths] = useState("0");
+  const [days, setDays] = useState("0");
+  const [hours, setHours] = useState("0");
+  const [minutes, setMinutes] = useState("0");
+  const [seconds, setSeconds] = useState("0");
+
+  const AnniversaryCounter = () => {
+    const lastStream = dayjs("2021-09-09T22:35:00.000Z");
+
+    setInterval(() => {
+      const currentTime = dayjs();
+      const anniversaryDate = dayjs("2023-09-09T22:35:00.000Z");
+      const elapsedTime = dayjs.preciseDiff(currentTime, anniversaryDate, true);
+
+      const months = elapsedTime["months"].toString().padStart(2, "0");
+      const days = elapsedTime["days"].toString().padStart(2, "0");
+      const hours = elapsedTime["hours"].toString().padStart(2, "0");
+      const minutes = elapsedTime["minutes"].toString().padStart(2, "0");
+      const seconds = elapsedTime["seconds"].toString().padStart(2, "0");
+
+      setMonths(months);
+      setDays(days);
+      setHours(hours);
+      setMinutes(minutes);
+      setSeconds(seconds);
+    });
+  };
+
+  useEffect(() => {
+    AnniversaryCounter();
+  });
+
   return (
     <div className="w-full my-6">
-      <div className="mb-4 w-full flex justify-center items-center">
-        <div className="decoration-l"></div>
-        <h1 className="mx-6 text-xl bg-gradient-to-b from-[#dae9f2] to-[#adcde2] bg-clip-text text-transparent">
-          {timerYears}
-        </h1>
-        <div className="decoration-r"></div>
-      </div>
+      <AnniversaryTitle />
       <div className="border border-[#60512b] rounded-md p-1">
         <div className="[&>*:not(:last-child)]:border-[#3e423c] [&>*:not(:last-child)]:border-r [&>*]:flex-1 relative h-[90px] w-full flex items-center text-center leading-6 bg-[url('/images/time.png')] bg-no-repeat bg-[length:100%_100%] bg-center">
           <div className="block">
             <div className="bg-gradient-to-b from-[#ffe98d] to-[#e19f27] bg-clip-text text-transparent text-4xl">
-              {timerMonths}
+              {months}
             </div>
             <div className="text-[0.7rem] font-['Noto_Sans'] font-normal uppercase text-[#a17831]">
               Miesiące
@@ -29,7 +57,7 @@ const Anniversary = ({
           </div>
           <div className="block">
             <div className="bg-gradient-to-b from-[#ffe98d] to-[#e19f27] bg-clip-text text-transparent text-4xl">
-              {timerDays}
+              {days}
             </div>
             <div className="text-[0.7rem] font-['Noto_Sans'] font-normal uppercase text-[#a17831]">
               Dni
@@ -37,7 +65,7 @@ const Anniversary = ({
           </div>
           <div className="block">
             <div className="bg-gradient-to-b from-[#ffe98d] to-[#e19f27] bg-clip-text text-transparent text-4xl">
-              {timerHours}
+              {hours}
             </div>
             <div className="text-[0.7rem] font-['Noto_Sans'] font-normal uppercase text-[#a17831]">
               Godziny
@@ -45,7 +73,7 @@ const Anniversary = ({
           </div>
           <div className="block">
             <div className="bg-gradient-to-b from-[#ffe98d] to-[#e19f27] bg-clip-text text-transparent text-4xl">
-              {timerMinutes}
+              {minutes}
             </div>
             <div className="text-[0.7rem] font-['Noto_Sans'] font-normal uppercase text-[#a17831]">
               Minuty
@@ -53,7 +81,7 @@ const Anniversary = ({
           </div>
           <div className="block">
             <div className="bg-gradient-to-b from-[#ffe98d] to-[#e19f27] bg-clip-text text-transparent text-4xl">
-              {timerSeconds}
+              {seconds}
             </div>
             <div className="text-[0.7rem] font-['Noto_Sans'] font-normal uppercase text-[#a17831]">
               Sekundy

@@ -5,7 +5,7 @@ function Footer() {
     <footer className="mt-4 font-normal font-['Noto_Sans'] text-[#b7cedd] drop-shadow-[0_0_1px_rgba(0,0,0,1)]">
       <strong>
         <span className="year">&copy;{dayjs().year()} </span>
-        <a href="https://twitch.tv/vanrood">vanRooD Date</a>
+        <a href="https://twitch.tv/vanrood">vanRooD Streams</a>
       </strong>
       <div className="flex justify-center items-center">
         <svg
@@ -25,7 +25,7 @@ function Footer() {
           ></path>
         </svg>
         <span>
-          Made by <a href="https://nedi.me">Nedi</a>
+          Made by <a href="https://www.nedi.me">Nedi</a>
         </span>
       </div>
     </footer>
