@@ -39,6 +39,11 @@ export default function Home() {
         />
         <meta name="theme-color" content="#15243a" />
         <link
+          rel="alternate"
+          type="application/json+oembed"
+          href="https://vanrood.nedi.me/api/oembed"
+        />
+        <link
           rel="icon"
           href="https://static-cdn.jtvnw.net/jtv_user_pictures/351d2d6e-6b82-43aa-a5db-67971e726815-profile_image-600x600.png"
         />
