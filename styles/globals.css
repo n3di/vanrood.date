@@ -97,10 +97,6 @@ hr {
 }
 
 .background-image {
-  background-image: url(https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/a129287628ef45a668f0_vanrood_44220253979_3816192307//thumb/thumb967640754-1920x1080.jpg);
-  background-attachment: fixed;
-  background-position: 50%;
-  background-size: cover;
   transform: scale(1.1);
   filter: blur(3px);
 }
