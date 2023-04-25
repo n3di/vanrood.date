@@ -1,6 +1,6 @@
 {
-  "name": "vanrood.date",
-  "version": "0.1.0",
+  "name": "vanrood-website",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",

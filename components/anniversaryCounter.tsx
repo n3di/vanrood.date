@@ -21,7 +21,9 @@ const Anniversary = () => {
 
     setInterval(() => {
       const currentTime = dayjs();
-      const anniversaryDate = dayjs("2023-09-09T22:35:00.000Z");
+      const anniversaryDate = lastStream.year(
+        currentTime.add(1, "year").year()
+      );
       const elapsedTime = dayjs.preciseDiff(currentTime, anniversaryDate, true);
 
       const months = elapsedTime["months"].toString().padStart(2, "0");
