@@ -17,7 +17,7 @@ const Anniversary = () => {
   const [seconds, setSeconds] = useState("0");
 
   const AnniversaryCounter = () => {
-    const lastStream = dayjs("2024-01-18T21:07:00.000Z");
+    const lastStream = dayjs("2021-09-09T22:35:00.000Z");
 
     setInterval(() => {
       const currentTime = dayjs();
